@@ -11,10 +11,10 @@ class Enemy:
 
     # abstract methods that will be implemented by subclasses
     def talk(self):
-        return (f"I am a {self.__type_of_enemy}")
+        print(f"I am a {self.__type_of_enemy}")
 
     def move_forward(self):
-        return (f"{self.__type_of_enemy} closer to you")
+        print(f"{self.__type_of_enemy} closer to you")
 
     def attack_enemy(self):
-        return (f"{self.__type_of_enemy} attack for {self.attack} percent damage")
+        print(f"{self.__type_of_enemy} attack for {self.attack} percent damage")
