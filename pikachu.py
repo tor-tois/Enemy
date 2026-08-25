@@ -7,9 +7,11 @@ class Pikachu(Enemy):
 
     def special_attack(self):
         if random.random() < 0.5:
+            previous_health = self.health
             self.health = min(self.max_health, self.health + 10)
+            healed = self.health - previous_health
             print(f"{self.get_enemy()} uses Thunderbolt "
-                  f"and gains 10 health")
+                  f"and gains {healed} health")
         else: 
             print(f"{self.get_enemy()} uses Thunderbolt but it failed")
 

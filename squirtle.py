@@ -7,9 +7,11 @@ class Squirtle(Enemy):
 
     def special_attack(self):
         if random.random() < 0.3:
+            previous_health = self.health
             self.health = min(self.max_health, self.health + 8)
+            healed = self.health - previous_health
             print(f"{self.get_enemy()} uses Water Pulse "
-                  f"and gains 8 health")
+                  f"and gains {healed} health")
         else: 
             print(f"{self.get_enemy()} uses Water Pulse but it failed")
 
