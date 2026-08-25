@@ -1,6 +1,6 @@
-from enemy import *
-from pikachu import *
-from squirtle import *
+from enemy import Enemy
+from pikachu import Pikachu
+from squirtle import Squirtle
 import random
 
 def battle(e1: Enemy, e2: Enemy):
@@ -30,11 +30,11 @@ def battle(e1: Enemy, e2: Enemy):
             defender.health = 0
         print(f"{defender.get_enemy()} : {defender.health} HP left")
 
-        # check if the defender 
+        # check if the defender is defeated
         if defender.health <= 0:
             break
 
-        # conter attack
+        # counter attack
         attacker.health -= defender.attack
         defender.attack_enemy()
 

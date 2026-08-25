@@ -1,4 +1,4 @@
-from enemy import *
+from enemy import Enemy
 import random
 
 class Pikachu(Enemy):
@@ -7,9 +7,9 @@ class Pikachu(Enemy):
 
     def special_attack(self):
         if random.random() < 0.5:
-                self.health += 10
-                print(f"{self.get_enemy()} uses Thunderbolt "
-                      f"and gains 10 health")
+            self.health = min(self.max_health, self.health + 10)
+            print(f"{self.get_enemy()} uses Thunderbolt "
+                  f"and gains 10 health")
         else: 
             print(f"{self.get_enemy()} uses Thunderbolt but it failed")
 

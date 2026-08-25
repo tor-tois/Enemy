@@ -18,7 +18,7 @@ class Enemy:
         print(f"{self.__type_of_enemy} closer to you")
 
     def attack_enemy(self):
-        print(f"{self.__type_of_enemy} attack for {self.attack} damage")
+        print(f"{self.__type_of_enemy} attacks for {self.attack} damage")
 
     def special_attack(self):
         print(f"Enemy has no special attack")
