@@ -4,8 +4,9 @@ class Enemy:
     def __init__(self, type_of_enemy, health, attack):
         self.__type_of_enemy = type_of_enemy
         self.health = health
+        self.max_health = health
         self.attack = attack
-
+    # Encapsulation: Getter method to access the private attribute __type_of_enemy
     def get_enemy(self):
         return self.__type_of_enemy
 
@@ -17,4 +18,7 @@ class Enemy:
         print(f"{self.__type_of_enemy} closer to you")
 
     def attack_enemy(self):
-        print(f"{self.__type_of_enemy} attack for {self.attack} percent damage")
+        print(f"{self.__type_of_enemy} attacks for {self.attack} damage")
+
+    def special_attack(self):
+        print(f"Enemy has no special attack")
